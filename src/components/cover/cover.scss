@@ -1,0 +1,11 @@
+@import 'styles/breakpoints.scss';
+
+.cover img {
+  float: left;
+  padding: 0 10px 10px 0;
+  width: 150px;
+
+  @include breakpoint($above-medium) {
+    width: 300px;
+  }
+}

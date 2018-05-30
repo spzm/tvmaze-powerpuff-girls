@@ -1,0 +1,41 @@
+$small-size: 420px;
+$medium-size: 720px;
+$large-size: 1000px;
+
+$above-small: (min: #{$small-size + 1});
+$above-medium: (min: #{$medium-size + 1});
+$above-large: (min: #{$large-size + 1});
+
+$below-small: (max: #{$small-size});
+$below-medium: (max: #{$medium-size});
+$below-large: (max: #{$large-size});
+
+$small: (min: 0, max: #{$small-size});
+$medium: (min: #{$small-size + 1}, max: #{$medium-size});
+$large: (min: #{$medium-size + 1}, max: #{$large-size});
+
+// Simplified implementation of breakpoint mixin
+// to only fit the needs of demo project
+@mixin breakpoint($breakpoint) {
+  $query: null;
+
+  @if map-has-key($breakpoint, min) {
+    $query: "(min-width: #{map-get($breakpoint, min)})";
+  }
+
+  @if map-has-key($breakpoint, max) and map-has-key($breakpoint, min) {
+    $query: "#{$query} and";
+  }
+
+  @if map-has-key($breakpoint, max) {
+    $query: "#{$query} (max-width: #{map-get($breakpoint, max)})";
+  }
+
+  @if $query {
+    @media screen and #{$query} {
+      @content;
+    }
+  } @else {
+    @warn 'Invalid breakpoint #{$breakpoint}'
+  }
+}

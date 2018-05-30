@@ -1,0 +1,21 @@
+@import 'styles/_colors.scss';
+
+.button {
+  background-color: $primary-background;
+  border-radius: 3px;
+  border: none;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+  color: $on-primary;
+  cursor: pointer;
+  flex-basis: 20%;
+  font-size: 14px;
+  height: 40px;
+  outline: none;
+  padding: 5px 10px;
+}
+
+.button:hover {
+  color: $on-secondary;
+  background-color: $secondary;
+  opacity: 0.8;
+}

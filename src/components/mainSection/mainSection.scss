@@ -1,0 +1,14 @@
+@import 'styles/_breakpoints.scss';
+
+.main-section {
+  margin: 10px auto;
+    padding: 0 2.5%;
+
+  @include breakpoint($above-small) {
+    padding: 0 5%;
+  }
+
+  @include breakpoint($above-large) {
+    padding: 0 15%;
+  }
+}

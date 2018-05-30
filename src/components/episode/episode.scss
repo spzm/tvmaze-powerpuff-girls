@@ -1,0 +1,60 @@
+@import 'styles/breakpoints.scss';
+
+.episode {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.episode__details {
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoint($above-small) {
+    flex-direction: row;
+  }
+}
+
+.episode__cover {
+  min-width: 30%;
+  max-width: 50%;
+}
+
+.episode__cover img {
+  width: 100%;
+  padding: 0;
+
+  @include breakpoint($above-small) {
+    margin: 0 10px 0 0;
+  }
+}
+
+.episode__title {
+  margin-top: 0;
+}
+
+.episode__description {
+  @include breakpoint($above-small) {
+    padding-left: 5px;
+  }
+
+  @include breakpoint($above-small) {
+    padding-left: 10px;
+  }
+}
+
+.episode__description {
+  padding: 0 20px;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  padding: 10px 0;
+
+  @include breakpoint($above-small) {
+    padding: 0 10px;
+  }
+}
+
+.episode__description > p:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}

@@ -1,0 +1,41 @@
+@import 'styles/_colors.scss';
+
+.episodes-list {
+  display: table;
+  width: 100%;
+}
+
+.episodes-list__header {
+  display: table-row;
+  background-color: $primary;
+  color: $on-primary;
+  height: 30px;
+}
+
+.episodes-list__item {
+  display: table-row;
+  vertical-align: middle;
+  height: 30px;
+}
+.episodes-list__item:nth-child(2n) {
+  background-color:rgb(241, 241, 241);
+}
+
+.episodes-list__cell {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0 5px;
+}
+
+.episodes-list__cell:first-child {
+  width: 10%;
+}
+
+.episodes-list__cell:nth-child(2) {
+  width: 20%;
+}
+
+.episodes-list__cell:nth-child(3) {
+  padding-left: 10px;
+}
+

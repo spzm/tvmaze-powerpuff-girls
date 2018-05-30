@@ -1,0 +1,29 @@
+@import 'styles/breakpoints.scss';
+
+.show__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.show__content {
+  display: flex;
+
+  @include breakpoint($below-medium) {
+    display: block;
+  }
+}
+
+.show__description {
+  padding: 0 20px 0 0;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+
+  @include breakpoint($above-medium) {
+    padding: 0 10px;
+  }
+}
+
+.show__description > p:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
