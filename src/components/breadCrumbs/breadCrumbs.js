@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 /**
  * Simple BreadCrumbs implementation that requires
- * manual set of crumbs item.
+ * manual set of crumb items.
  */
 const BreadCrumbs = ({ children }) => {
   const crumbsItems = React.Children.toArray(children);

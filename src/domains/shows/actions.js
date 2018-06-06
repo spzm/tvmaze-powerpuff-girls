@@ -19,7 +19,7 @@ const isShowFetched = (state, showId) => {
 
 export function getShow(showId) {
   return (dispatch, getState) => {
-    // TODO: proper string parcing
+    // TODO: use parseInt
     if (isShowFetched(getState(), +showId)) return;
 
     HttpService.get(`${showsEndpoint}/${showId}`)

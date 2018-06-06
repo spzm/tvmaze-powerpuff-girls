@@ -14,8 +14,8 @@ $small: (min: 0, max: #{$small-size});
 $medium: (min: #{$small-size + 1}, max: #{$medium-size});
 $large: (min: #{$medium-size + 1}, max: #{$large-size});
 
-// Simplified implementation of breakpoint mixin
-// to only fit the needs of demo project
+// Simplified implementation of breakpoint mixin.
+// It fits only the needs of demo project
 @mixin breakpoint($breakpoint) {
   $query: null;
 

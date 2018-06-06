@@ -9,8 +9,7 @@ const defaultDebugLevel = debugLevels.info;
 
 /**
  * It's not a real logger but a stub arround console.log to show
- * possible logger Facade to other lib or internal
- * loggin infrastructure implementation
+ * Facade can be done here.
  */
 class Logger {
   constructor(debugLevel) {

@@ -21,8 +21,8 @@ const getEpisodesFetched = createAction(GET_EPISODES_FETCHED);
  * - then retrieve it season by season
  *
  * This possible case could be better semantically
- * but it will require too match calls. So, in
- * some component inside it will be filtered by season.
+ * but it will require too much calls. Therefore, in
+ * some component it will be filtered by season.
  *
  * @param {Number} showId id to fetch all show episodes
  */
@@ -39,10 +39,10 @@ const getEpisodeDetailsSuccess = createAction(GET_EPISODE_DETAILS_SUCCESS);
 const getEpisodeDetailsFailed = createAction(GET_EPISODE_DETAILS_FAILED);
 
 /**
- * This method try to get cached episod value if it's already
+ * This method try to get cached episode value if it's already
  * exist in episodes.
  *
- * TODO: here is a possible issue when episodes were initialized
+ * TODO: there is a possible issue when episodes were initialized
  * by another show.
  *
  * @param {Object} state current redux state
@@ -62,8 +62,7 @@ export function getEpisodeBySeason(showId, season, number) {
   return (dispatch, getState) => {
     const state = getState();
 
-    // TODO:
-    // Make proper helper to parseInt and handle excpetion
+    // TODO: Implement proper helper to parseInt and handle exception
     const episode = getEpisodeFromStore(state, +season, +number);
 
     if (episode) {

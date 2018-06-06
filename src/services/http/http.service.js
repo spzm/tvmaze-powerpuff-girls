@@ -13,17 +13,17 @@ function json(response) {
 /**
  * Provides basic REST calls.
  *
- * In perspective this Service Adapter can be done around
- * axios lib that provides powerfull setup of api calls.
+ * In perspective, this Service Adapter can be done around
+ * axios lib that provides powerful setup of api calls.
  */
 class HttpService {
   constructor() {
-    // Basically content-type should be 'application/json'
+    // Basically content-type should be 'application/json'.
     // For some unknown reason tvmaze doesn't return proper CORS header for
-    // OPTION request (automatic preflight). So, to avoid it GET request
-    // should have only simple headers that excludes usage of 'application/json'.
+    // OPTION request (automatic preflight). Therefore, to success with GET request
+    // only simple headers should be included. 'application/json' will require preflight....
     //
-    // TODO: setup proxy
+    // TODO: setup backend proxy
     const headers = {
       'Content-Type': 'text/plain',
     };
@@ -34,9 +34,8 @@ class HttpService {
   }
 
   /**
-   *
    * Note: This function can be made as async/await but unfortunatelly
-   * babel generates regenerator code overhead for each async function use.
+   * babel generates regenerator overhead for each async function use.
    * This can make significant bundle grow.
    *
    * @method _request

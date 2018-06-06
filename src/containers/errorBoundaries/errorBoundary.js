@@ -12,8 +12,7 @@ class ErrorBoundary extends Component {
   componentDidCatch(error, info) {
     this.setState({ hasError: true });
 
-    // Place to update Logger to use json logs instead of stringify
-    // Wasn't add to simplify
+    // Place to update Logger. Json logs should be done instead of stringify
     Logger.error(`${error} ${JSON.stringify(info)}`);
   }
 
